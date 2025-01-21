@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_comingSoonFragment"
+            app:destination="@id/comingSoonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pendingOrdersFragment"
+            app:destination="@id/pendingOrdersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_serviceDetailsFragment"
+            app:destination="@id/serviceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceDetailsFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.ServiceDetailsFragment"
+        android:label="fragment_service_details"
+        tools:layout="@layout/fragment_service_details" >
+        <action
+            android:id="@+id/action_serviceDetailsFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+        <argument
+            android:name="service"
+            app:argType="com.neatroots.suddahutpadah.model.ProductModel" />
+        <action
+            android:id="@+id/action_serviceDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.ServiceFragment"
+        android:label="ServiceFragment" >
+        <action
+            android:id="@+id/action_serviceFragment_to_serviceDetailsFragment"
+            app:destination="@id/serviceDetailsFragment" />
+        <action
+            android:id="@+id/action_serviceFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="category"
+            app:argType="com.neatroots.suddahutpadah.model.CategoryModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.ComingSoonFragment"
+        android:label="ComingSoonFragment" >
+        <action
+            android:id="@+id/action_comingSoonFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.OrderHistoryFragment"
+        android:label="OrderHistoryFragment" >
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingOrdersFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.PendingOrdersFragment"
+        android:label="PendingOrdersFragment" >
+        <action
+            android:id="@+id/action_pendingOrdersFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.neatroots.suddahutpadah.fragments.AboutUsFragment"
+        android:label="AboutUsFragment" >
+        <action
+            android:id="@+id/action_aboutUsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
